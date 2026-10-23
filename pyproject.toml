@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spymanager"
+version = "2.0.0"
+description = "A CLI tool to check public profile URL patterns for a username."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31.0,<3.0.0", "rich>=13.7.0,<15.0.0"]
+license = { text = "MIT" }
+keywords = ["python", "cli", "username", "public-profiles", "terminal"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Utilities",
+]
+
+[project.scripts]
+spymanager = "spymanager.cli:main"
+
+[tool.setuptools]
+packages = ["spymanager"]
